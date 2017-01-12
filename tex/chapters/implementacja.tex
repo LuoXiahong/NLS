@@ -1,0 +1,32 @@
+\section{Implementacja algorytmu w C++}
+
+Prototyp zrealizowany w środowisku Matlab pozwolił na bardzo szybką implementację algorytmu w C++. Miała ona na celu przyspieszenie dokonywanych obliczeń.
+
+Program napisany w C++ ma strukturę jednoplikową i w samym działaniu odbiega od prototypu tylko pod kątem braku wizualizacji wyników. W zamian, rezultat zapisywany jest do pliku tekstowego.
+
+Kompilacja programu została przetestowana pod kompilatorem GCC 5.3.0 na systemie operacyjnym Microsoft Windows 10. Ważną kwestią okazało się dodanie flagi automatycznej optymalizacji \texttt{-Ofast} podczas wykonywania polecenia \texttt{g++ main.cpp}, w przeciwnym wypadku program w C++ wykonywał się znacznie dłużej niż prototyp w Matlabie. 
+
+Podczas uruchamiania programu istnieje możliwość przekazania argumentów z poziomu wiersza poleceń. Parametry te to kolejno nazwa pliku wejściowego, nazwa pliku wyjściowego, parametr $ P $, parametr $ M $ oraz parametr $ \lambda $. W przypadku nie podania argumentów przyjmują one wartości domyślne:
+
+\begin{table}[!htb]
+	\centering
+	\caption{Domyślne wartości argumentów funkcji \texttt{main}. Parametry liczbowe zostały przyjęte zgodnie z rodziałem \ref{ch:parametry}. }
+	\begin{tabular}{|c|l|l|}
+		\hline
+		Argument & Wartość domyślna \\
+		\hline
+		Nazwa pliku wejściowego & \texttt{input} \\
+		\hline
+		Nazwa pliku wyjściowego & \texttt{output} \\
+		\hline
+		$P$ & $10$ \\
+		\hline
+		$M$ & $2000$ \\
+		\hline
+		$\lambda$ & $0.012$ \\
+		\hline
+	\end{tabular}
+	\label{tab:tabela1}
+\end{table}
+
+Do przechowywania danych wejściowych oraz sygnału odszumionego wykorzystano darmową bibliotekę Eigen.

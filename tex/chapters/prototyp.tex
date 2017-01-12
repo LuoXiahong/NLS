@@ -1,0 +1,25 @@
+\section{Prototyp programu}
+
+Prototyp programu zrealizowano w środowisku Matlab. Tę decyzję podjęto ze względu na łatwość implementacji algorytmu w tym środowisku, znajomość autorów projektu języka Matlab oraz szybką możliwość wizualizacji osiągniętych wyników.
+
+Dla ujednolicenia oznaczeń przyjmijmy, że $ n $ oznaczna liczbę próbek sygnału wejściowego. Prototyp został podzielony na dwie zasadnicze części:
+
+\begin{enumerate}
+	\item Wczytanie danych pomiarowych, wywołanie funkcji zawierającej implementację metody nielokalnych średnich oraz wyrysowanie wyników.
+	\item Funkcja odszumiająca sygnał wejściowy metodą NLM
+\end{enumerate}
+
+\subsection{Implementacja metody NLM}
+\label{ch:implementacja}
+Implementacja funkcji odszumiającej odbyła się zgodnie z opisem w rozdziale \ref{ch:algorytm}. 
+
+Zasadniczo, składa się ona z 3 zagnieżdżonych w sobie pętli. Najbardziej zewnętrzna z nich ma za zadanie przejść przez wszystkie próbki sygnału wejściowego $ v(s) $ oraz uzyskać $ \hat{u}(s) $ zgodnie z \eqref{eq:jeden}.
+
+Środkowa pętla odpowiada za wyliczenie \eqref{eq:dwa} przy ustalonym $ s $ dla każdego $ t\in N(s) $. Uzyskany wynik dla każdej iteracji dodawany jest do zmiennej \texttt{Z} oraz mnożony przez $ v(t) $ i dodawany do \texttt{Mult}, w celu wyznaczenia odpowiednio $ Z(s) $ oraz sumy z równania \eqref{eq:jeden}.
+
+Wewnętrzna pętla ma za zadanie wyznaczyć $ d^{2}(s,t) $ pomiędzy próbkami $ s $ i $ t $ zgodnie z \eqref{eq:dwa}. 
+
+\subsection{Wizualizacja uzyskanych wyników}
+Główny program ma za zadanie wczytać dane wejściowe, przekazać je do funkcji odszumiającej opisanej w \ref{ch:implementacja} wraz z parametrami, których dobór odbył się zgodnie z rodziałem  \ref{ch:parametry}. Po otrzymaniu wyniku filtracji program główny przystępuje do wizualizacji uzyskanych rezultatów. Odbywa się to w formie wykresu porównującego dane oryginalne z danymi odszumionymi.
+
+Warto zaznaczyć, że dla próbek $ s $ o numerach od $ 1 $ do $ P $ oraz od $ n-P+1 $ do $ n $ lokalny fragment wokół $ s $ jest mniejszy niż dla pozostałych próbek. Postanowiono dla nich jako estymatę przyjąć sygnał wejściowy. Takie podejście nie wpływa w sposób zauważalny na rezultat, gdyż $ P\ll n $.

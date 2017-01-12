@@ -1,0 +1,16 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
+A level-1 auxiliary file: chapters/wstep.aux
+A level-1 auxiliary file: chapters/algorytm.aux
+A level-1 auxiliary file: chapters/parametry.aux
+A level-1 auxiliary file: chapters/prototyp.aux
+A level-1 auxiliary file: chapters/implementacja.aux
+A level-1 auxiliary file: chapters/porownanie.aux
+A level-1 auxiliary file: chapters/wnioski.aux
+The style file: plain.bst
+Database file #1: reference.bib
+A bad cross reference---entry "DarbonCCOJ08"
+refers to entry "conf/isbi/2008", which doesn't exist
+Warning--I didn't find a database entry for "conf/isbi/2008"
+Warning--empty journal in DarbonCCOJ08
+Warning--empty year in mitbih
+(There was 1 error message)

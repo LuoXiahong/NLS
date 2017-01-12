@@ -1,0 +1,12 @@
+\select@language {polish}
+\contentsline {section}{\numberline {1}Wst\IeC {\k e}p}{2}
+\contentsline {section}{\numberline {2}Algorytm}{3}
+\contentsline {section}{\numberline {3}Dob\IeC {\'o}r parametr\IeC {\'o}w}{4}
+\contentsline {section}{\numberline {4}Prototyp programu}{5}
+\contentsline {subsection}{\numberline {4.1}Implementacja metody NLM}{5}
+\contentsline {subsection}{\numberline {4.2}Wizualizacja uzyskanych wynik\IeC {\'o}w}{5}
+\contentsline {section}{\numberline {5}Implementacja algorytmu w C++}{6}
+\contentsline {section}{\numberline {6}Por\IeC {\'o}wnanie implementacji w Matlabie oraz w C++}{7}
+\contentsline {subsection}{\numberline {6.1}Rozbie\IeC {\.z}no\IeC {\'s}ci mi\IeC {\k e}dzy implementacjami}{7}
+\contentsline {subsection}{\numberline {6.2}Czasowe por\IeC {\'o}wnanie implementacji}{8}
+\contentsline {section}{\numberline {7}Wnioski}{9}

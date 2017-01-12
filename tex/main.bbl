@@ -1,0 +1,21 @@
+\begin{thebibliography}{1}
+
+\bibitem{DarbonCCOJ08}
+Jérôme Darbon, Alexandre Cunha, Tony~F. Chan, Stanley Osher, and Grant~J.
+  Jensen.
+\newblock Fast nonlocal filtering applied to electron cryomicroscopy.
+\newblock pages 1331--1334, 2008.
+
+\bibitem{mitbih}
+PsychoNet.
+\newblock Mit-bih arrhythmia database.
+\newblock {\em (Dostęp online 15.12.2016r.
+  https://www.physionet.org/physiobank/database/mitdb/)}.
+
+\bibitem{tracey2012nonlocal}
+Brian~H Tracey and Eric~L Miller.
+\newblock Nonlocal means denoising of ecg signals.
+\newblock {\em IEEE Transactions on Biomedical Engineering}, 59(9):2383--2386,
+  2012.
+
+\end{thebibliography}

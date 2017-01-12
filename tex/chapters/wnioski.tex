@@ -1,0 +1,13 @@
+\section{Wnioski}
+
+Projekt miał na celu zapoznanie się z metodą nielokalnych średnich w odszumianiu sygnału EKG. Algorytm NLM jest wykorzystywany przede wszystkim w odszumianiu obrazów, ale, jak widać, jego wersja ,,jednowymiarowa'' jest również skuteczna w odszumianiu sygnałów biomedycznych.
+
+Warto zauważyć, że metoda praktycznie nie ingeruje w okolicach załamki Q. Jest to związane z tym, że różnice wartości sygnału między dowolnymi próbkami $s$ i $t$ w obrębie załamki Q są duże, a co za tym idzie, wagi w tym punkcie są małe.
+
+Algorytm jest stosunkowo wolny. W celu przyspieszenia działania można zastosować dwie zmiany w działaniu:
+\begin{enumerate}
+	\item Zrównoleglenie wyliczeń i wykorzystanie GPU
+	\item Wykorzystanie algorytmu zaproponowanego w artykule ,,\textit{Fast nonlocal filtering applied to electron cryomicroscopy}''\cite{DarbonCCOJ08}
+\end{enumerate} 
+
+W projekcie użyto dwóch implementacji tego samego algorytmu. Prototyp programu pozwala na szybką implementację wybranego algorytmu w języku niekompilowanym. Służy on do testowania poprawności implementacji i ma na celu ułatwienie napisania programu wyjściowego. Sam program ma za zadanie przyspieszyć obliczenia. Taka konwencja znacznie przyspiesza proces tworzenia oprogramowania.
